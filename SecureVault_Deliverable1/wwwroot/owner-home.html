@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Owner Dashboard - Secure Vault</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Vault Owner Portal</a>
+            <div class="navbar-nav ms-auto">
+                <span class="nav-link text-light me-3">Welcome, Owner</span>
+                <a class="btn btn-outline-danger btn-sm" href="index.html">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <h2>Create New Secure Snippet</h2>
+        <div class="card p-3 mb-4 shadow-sm">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Snippet Title</label>
+                    <input type="text" class="form-control" placeholder="e.g. DB Connection Script">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Code / Payload Content</label>
+                    <textarea class="form-control" rows="5" placeholder="Paste your code here..."></textarea>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Expiration Time</label>
+                        <select class="form-select">
+                            <option>Burn on Read (Single View)</option>
+                            <option>1 Hour</option>
+                            <option>24 Hours</option>
+                            <option>7 Days</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Optional Password Protection</label>
+                        <input type="password" class="form-control" placeholder="Passcode (Optional)">
+                    </div>
+                </div>
+                <button type="button" class="btn btn-success">Save & Generate Link</button>
+            </form>
+        </div>
+
+        <h3>My Saved Snippets</h3>
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Expiry</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>101</td>
+                    <td>SQL Query Config</td>
+                    <td>24 Hours</td>
+                    <td><span class="badge bg-success">Active</span></td>
+                    <td><button class="btn btn-danger btn-sm">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
